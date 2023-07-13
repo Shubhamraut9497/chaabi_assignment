@@ -1,4 +1,11 @@
+import { useState } from "react";
+
 const Analytics = ({ type }) => {
+  const [flag,setFlag]=useState(false);
+
+  const handleClass=()=>{
+     setFlag(!flag);
+  }
   return (
     <>
       <div className="icon_type">
@@ -24,7 +31,7 @@ const Analytics = ({ type }) => {
             fill="#0D62FF"
           />
         </svg>
-        <div className="types_names">{type}</div>
+        <div className={flag?"coloured_background":"types_names"} onClick={handleClass}>{type}</div>
       </div>
     </>
   );

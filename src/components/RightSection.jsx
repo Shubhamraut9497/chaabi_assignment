@@ -9,6 +9,9 @@ import {
 } from "../chartData/AllCharts";
 import WorkersPieChart from "../chartData/WorkersPieChart";
 import WorkersGraphChart from "../chartData/WorkersGraphChart";
+import MonthlyTrainingActivity from "../chartData/MonthlyTrainingActivity";
+import QuizPassing from "../chartData/QuizPassing";
+import DailyTraining from "../chartData/DailyTraining";
 function RightSection() {
   return (
     <div className="right_section">
@@ -52,12 +55,23 @@ function RightSection() {
         </div>
       </div>
       <div className="right__section__workers__info">
-      <div className="Chapter__wise__status">
-         <WorkersPieChart/>
+        <div className="Chapter__wise__status">
+          <WorkersPieChart />
+        </div>
+        <div className="active__workers__in__training">
+          <WorkersGraphChart />
+        </div>
       </div>
-      <div className="active__workers__in__training">
-        <WorkersGraphChart/>
-      </div>
+      <div className="training__activity">
+        <div className="monthly__training__activity">
+          <MonthlyTrainingActivity/>
+        </div>
+        <div className="quiz__passsing">
+          <QuizPassing/>
+        </div>
+        <div className="daily__training__completions">
+          <DailyTraining/>
+        </div>
       </div>
     </div>
   );
